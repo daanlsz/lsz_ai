@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "微软雅黑", sans-serif;
+}
+body {
+    overflow: hidden;
+    background: #e6f3f8;
+    user-select: none;
+}
+#worldContainer {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* 顶部磨砂面板 */
+.top-header {
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 12px 24px;
+    background: rgba(255,255,255,0.35);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+.page-title {
+    font-size: 20px;
+    color: #2c5282;
+}
+.save-panel {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.save-panel select, .save-panel button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    background: rgba(255,255,255,0.6);
+}
+.save-panel button:hover {
+    background: #74b9ff;
+    color: #fff;
+}
+
+/* 底部磨砂工具栏 */
+.tool-bar {
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    padding: 15px 20px;
+    background: rgba(255,255,255,0.35);
+    backdrop-filter: blur(8px);
+    border-radius: 18px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+.tool-item {
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    background: rgba(255,255,255,0.4);
+}
+.tool-item.active {
+    background: #74b9ff;
+    color: #fff;
+}
+.tool-item:hover {
+    background: rgba(116,185,255,0.5);
+}
+
+/* 右下小地图 */
+.mini-map-box {
+    position: fixed;
+    right: 20px;
+    bottom: 80px;
+    padding: 8px;
+    background: rgba(255,255,255,0.35);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    z-index: 100;
+}
+#miniMapCanvas {
+    border-radius: 6px;
+}

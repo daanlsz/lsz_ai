@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>桌面微缩3D小世界编辑器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 顶部标题+存档面板 -->
+    <div class="top-header">
+        <h1 class="page-title">🪟 桌面摆件小世界编辑器</h1>
+        <div class="save-panel">
+            <select id="saveSelect">
+                <option value="default">默认存档</option>
+            </select>
+            <button id="resetBtn">重置视角</button>
+            <button id="clearAllBtn">一键还原草地</button>
+        </div>
+    </div>
+
+    <!-- 底部工具栏 -->
+    <div class="tool-bar">
+        <div class="tool-item" data-type="grass">🌿 草地</div>
+        <div class="tool-item" data-type="road">🛤️ 土路</div>
+        <div class="tool-item" data-type="water">💧 水域</div>
+        <div class="tool-item" data-type="stone">🪨 石头</div>
+        <div class="tool-item" data-type="tree">🌲 树木</div>
+        <div class="tool-item" data-type="house">🏠 小屋</div>
+        <div class="tool-item" data-type="erase">🧹 擦除</div>
+    </div>
+
+    <!-- 右下2D小地图 -->
+    <div class="mini-map-box">
+        <canvas id="miniMapCanvas" width="160" height="160"></canvas>
+    </div>
+
+    <!-- 3D画布容器 -->
+    <div id="worldContainer"></div>
+
+    <!-- 引入固定版本Three.js CDN 非ESM -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
