@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Foodize - 更快、更近、更美味的外卖送餐</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      color: #333;
+      background: #fff9f5;
+    }
+
+    /* 导航 */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 30px;
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff5a1f;
+    }
+
+    .nav-links a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #555;
+      font-weight: 500;
+    }
+
+    .download-btn {
+      background: #ff5a1f;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* 英雄区 */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 40px;
+      max-width: 1200px;
+      margin: auto;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .hero-text h1 {
+      font-size: 42px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .hero-img {
+      flex: 1;
+      min-width: 300px;
+      text-align: center;
+    }
+
+    .hero-img img {
+      max-width: 320px;
+      border-radius: 20px;
+    }
+
+    /* 功能区 */
+    .features {
+      background: white;
+      padding: 60px 30px;
+      text-align: center;
+    }
+
+    .features h2 {
+      font-size: 30px;
+      margin-bottom: 40px;
+    }
+
+    .feature-grid {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .feature-card {
+      background: #fff9f5;
+      padding: 30px;
+      border-radius: 16px;
+      width: 280px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .feature-card h3 {
+      margin: 15px 0;
+      color: #ff5a1f;
+    }
+
+    /* 下载区 */
+    .app-download {
+      padding: 70px 30px;
+      text-align: center;
+      background: #ff5a1f;
+      color: white;
+    }
+
+    .app-download h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .app-download p {
+      margin-bottom: 30px;
+      font-size: 17px;
+    }
+
+    .store-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .store-btn {
+      background: white;
+      color: #ff5a1f;
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    /* 评价 */
+    .reviews {
+      padding: 60px 30px;
+      background: white;
+      text-align: center;
+    }
+
+    .review-card {
+      max-width: 600px;
+      margin: 20px auto;
+      background: #fff9f5;
+      padding: 25px;
+      border-radius: 14px;
+    }
+
+    /* 页脚 */
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 30px 20px;
+      }
+      .hero h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 导航 -->
+  <nav>
+    <div class="logo">Foodize</div>
+    <div class="nav-links">
+      <a href="#features">功能</a>
+      <a href="#download">下载</a>
+      <a href="#reviews">评价</a>
+    </div>
+    <a href="#download" class="download-btn">立即下载</a>
+  </nav>
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>美食更快送达<br/>生活更轻松</h1>
+      <p>Foodize 让你随时随地享受附近美味，一键下单、极速配送、超多优惠。</p>
+      <a href="#download" class="download-btn">开始使用</a>
+    </div>
+    <div class="hero-img">
+      <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="food delivery">
+    </div>
+  </section>
+
+  <!-- 功能 -->
+  <section class="features" id="features">
+    <h2>为什么选择 Foodize</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>🚀 极速配送</h3>
+        <p>平均30分钟内送达，新鲜美味不等待。</p>
+      </div>
+      <div class="feature-card">
+        <h3>🍔 海量商家</h3>
+        <p>覆盖全城餐厅，早餐、午餐、夜宵应有尽有。</p>
+      </div>
+      <div class="feature-card">
+        <h3>💰 天天优惠</h3>
+        <p>新人红包、满减活动、会员折扣享不停。</p>
+      </div>
+      <div class="feature-card">
+        <h3>📍 精准定位</h3>
+        <p>智能定位，快速找到你附近的美食。</p>
+      </div>
+      <div class="feature-card">
+        <h3>💳 安全支付</h3>
+        <p>多种支付方式，安全便捷。</p>
+      </div>
+      <div class="feature-card">
+        <h3>📦 实时追踪</h3>
+        <p>订单状态实时查看，骑手位置一目了然。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 下载 -->
+  <section class="app-download" id="download">
+    <h2>下载 Foodize 开始美食之旅</h2>
+    <p>支持 iOS / Android 全平台</p>
+    <div class="store-buttons">
+      <a href="#" class="store-btn">App Store</a>
+      <a href="#" class="store-btn">Google Play</a>
+    </div>
+  </section>
+
+  <!-- 评价 -->
+  <section class="reviews" id="reviews">
+    <h2>用户真实评价</h2>
+    <div class="review-card">
+      <p>“超级好用！送餐速度快，界面简单，优惠也很多！”</p>
+      <br/>
+      <strong>— 美食爱好者</strong>
+    </div>
+    <div class="review-card">
+      <p>“外卖软件里最稳定、最好用的一个，推荐！”</p>
+      <br/>
+      <strong>— 每日用户</strong>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer>
+    <p>© 2025 Foodize.  All rights reserved.</p>
+  </footer>
+</body>
+</html>
